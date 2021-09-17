@@ -1,1 +1,46 @@
-<p>head works!</p>
+<div class="alert alert-primary" role="alert" [hidden]="mostrar">
+    <h2>{{ mostrar ? 'mostrar' : 'SITIO EN CONSTRUCCION OMEEE....' }}</h2>
+
+    <button type="button" class="btn btn-primary">
+        Dias de trabajo <span class="badge badge-light">2</span>
+      </button>
+
+
+  </div>
+  
+  <div>
+    <button (click)="informacion1()">
+        Informacion
+    </button><br>    <div class="container">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <td>
+                    <button class="btn btn-primary btn-lg active tamB" (click)="mostrar=!mostrar"><span>
+                            {{ mostrar ? 'mostrar nombre aplicación' : 'Ocultar nombre aplicación' }}
+                        </span>
+                    </button>
+                </td>
+                <td>
+                    <div [hidden]="mostrar">
+                        <h2>{{ mostrar ? 'mostrar' : 'MUSIK DEL KUNZIO' }}</h2>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h2>{{ texto }}</h2>
+</div>
+
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button class="btn btn-primary btn-lg active tamB" (click)="habilitar=!habilitar">
+        {{ habilitar ? 'Desbloquear' : 'Bloquear' }}
+    </button>
+    <button type="button" [disabled]="habilitar" class="btn btn-secondary">Atrasar</button>
+    <button type="button" [disabled]="habilitar" class="btn btn-secondary">Reproducir</button>
+    <button type="button" [disabled]="habilitar" class="btn btn-secondary">Pausar</button>
+    <button type="button" [disabled]="habilitar" class="btn btn-secondary">Parar</button>
+    <button type="button"  [disabled]="habilitar"class="btn btn-secondary">Adelantar</button>
+  </div>
+
+
